@@ -31,7 +31,7 @@ pipeline {
 			always {
 					echo "I run when u run always"
 			}
-			sucess {
+			success {
 				echo "I run when u pass"
 
 			}
