@@ -26,5 +26,19 @@ pipeline {
 			}
 		
 		}
+
+		post {
+			always {
+					echo "I run when u run always"
+			}
+			sucess {
+				echo "I run when u pass"
+
+			}
+			failure{
+				echo "I'm in failed stage"
+
+			}
+		}
 }
 
