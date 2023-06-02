@@ -15,7 +15,7 @@ pipeline {
 			stage('Build') {
 
 				steps {
-				sh 'mavin --version'
+				// sh 'mavin --version'
 				// sh 'docker version'
 				echo "Build"
 				}
