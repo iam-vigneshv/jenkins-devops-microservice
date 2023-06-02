@@ -4,10 +4,10 @@ pipeline {
 	agent any
 
 	environment {
-		mavenHome = tool 'myMaven'
-		// dockerHome = tool 'myDocker'
-		// PATH = "$mavenHome/bin:$dockerHome/bin:$PATH"
-		PATH = "$mavenHome/bin:$PATH"
+		// mavenHome = tool 'myMaven'
+		dockerHome = tool 'myDocker'
+		PATH = "$dockerHome/bin:$PATH"
+		// PATH = "$mavenHome/bin:$PATH"
 	}
 
 		stages{
@@ -15,9 +15,9 @@ pipeline {
 			stage('Build') {
 
 				steps {
-				echo 'Mavin --version'
-				bat 'mavin --version'
-				// sh 'docker version'
+				echo 'Docker --version'
+				// bat 'mavin --version'
+				bat 'docker version'
 				echo "Build"
 				}
 			}
